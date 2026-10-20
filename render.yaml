@@ -39,7 +39,7 @@ services:
       - key: COOKIE_SAMESITE
         value: lax
       - key: CORS_ORIGINS
-        value: https://phishguard-web.onrender.com
+        value: '["https://phishguard-web-xxxx.onrender.com"]'
       # Optional - set these in the Render dashboard if you want them:
       - key: VIRUSTOTAL_API_KEY
         sync: false
@@ -57,7 +57,7 @@ services:
       # Proxy API calls to the backend (same-origin for the browser)
       - type: rewrite
         source: /api/*
-        destination: https://phishguard-api.onrender.com/api/*
+        destination: https://phishguard-api-fa32.onrender.com/api/*
       # SPA fallback for React Router
       - type: rewrite
         source: /*
